@@ -42,8 +42,8 @@ export const actors: Actor[] = [
   },
   {
     name: "Rui Cardoso Esteves",
-    role: "Improvisador & Fundador",
-    bio: "Junta a comédia ao improviso e ainda arranja tempo para tratar da logística. Em palco, garante que ninguém fica de fora da piada.",
+    role: "Improvisador",
+    bio: "Atira-se de cabeça a qualquer cena e leva o público com ele. Nunca sabe o que vai dizer a seguir — e é isso que torna tudo divertido.",
     photo: "",
     socials: { instagram: "ruicardosoesteves" },
   },
