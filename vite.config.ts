@@ -2,9 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-// base: subcaminho onde o site é servido no GitHub Pages
-// (https://ruicarest.github.io/improolicos-anonimos/).
+// base: '/' porque o site é servido no domínio próprio improolicos.pt (raiz).
 export default defineConfig({
-  base: '/improolicos-anonimos/',
+  base: '/',
   plugins: [react()],
 })
