@@ -1,14 +1,17 @@
 import { site, instagramUrl } from "../data/site";
 import { InstagramIcon } from "./Icons";
 
-// NOTA sobre integração real do feed:
-// Um site estático não consegue ler o Instagram diretamente (a API precisa de
-// servidor/token). As opções mais simples para pôr os posts reais aqui são:
-//   1) Um widget gratuito de terceiros (ex.: Behold.so, EmbedSocial, LightWidget)
-//      — copias um <script>/embed e colas no lugar da grelha abaixo.
-//   2) O embed oficial de um post: no Instagram, "..." > "Incorporar" > copiar código.
-// Por agora fica uma grelha de placeholders que liga ao perfil.
-const PLACEHOLDER_TILES = 6;
+// Fotos "posts": qualquer imagem em src/assets/instagram/ aparece aqui.
+// (Para o feed real do Instagram a atualizar sozinho, ver nota no README —
+//  precisa de conta profissional + widget tipo Behold.)
+const modules = import.meta.glob(
+  "../assets/instagram/*.{jpg,jpeg,png,JPG,JPEG,PNG}",
+  { eager: true, query: "?url", import: "default" }
+) as Record<string, string>;
+
+const posts: string[] = Object.keys(modules)
+  .sort()
+  .map((k) => modules[k]);
 
 export default function InstagramSection() {
   return (
@@ -24,16 +27,19 @@ export default function InstagramSection() {
         </p>
 
         <div className="ig__grid">
-          {Array.from({ length: PLACEHOLDER_TILES }).map((_, i) => (
+          {posts.map((src, i) => (
             <a
-              key={i}
+              key={src}
               className="ig__tile"
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver no Instagram"
             >
-              <InstagramIcon />
+              <img src={src} alt={`Improólicos Anónimos no Instagram ${i + 1}`} loading="lazy" />
+              <span className="ig__overlay">
+                <InstagramIcon />
+              </span>
             </a>
           ))}
         </div>
