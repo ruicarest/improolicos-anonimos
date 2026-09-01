@@ -4,8 +4,7 @@ import { site, instagramUrl } from "../data/site";
 const links = [
   { href: "#video", label: "Vídeo" },
   { href: "#atores", label: "Atores" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#instagram", label: "Instagram" },
+  { href: "#instagram", label: "Fotos" },
   { href: "#contacto", label: "Contacto" },
 ];
 

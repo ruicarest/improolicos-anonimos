@@ -20,14 +20,14 @@ export interface Actor {
 // e preenche o campo "photo" com "/actors/sergio.jpg".
 export const actors: Actor[] = [
   {
-    name: "Sérgio Sá",
+    name: "Sérgio",
     role: "Improvisador",
     bio: "Especialista em criar o caos e depois fingir que era tudo planeado. Se há uma cena a descarrilar, ele está a conduzir o comboio.",
     photo: "/actors/sergio.jpg",
     socials: { instagram: "sergio_sa89" },
   },
   {
-    name: "José Diogo Pinto",
+    name: "Diogo",
     role: "Improvisador",
     bio: "O mestre das personagens improváveis. Consegue transformar uma sugestão do público num universo inteiro em três segundos.",
     photo: "/actors/diogo.jpg",
@@ -41,7 +41,7 @@ export const actors: Actor[] = [
     socials: { instagram: "luis_onearth" },
   },
   {
-    name: "Rui Cardoso Esteves",
+    name: "Rui",
     role: "Improvisador",
     bio: "Atira-se de cabeça a qualquer cena e leva o público com ele. Nunca sabe o que vai dizer a seguir — e é isso que torna tudo divertido.",
     photo: "/actors/rui.jpg",
