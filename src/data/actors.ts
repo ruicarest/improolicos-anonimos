@@ -22,14 +22,14 @@ export const actors: Actor[] = [
   {
     name: "Sérgio",
     role: "Improvisador",
-    bio: "O mais sensual do grupo — e faz questão de que ninguém se esqueça.",
+    bio: "O mais sensual do grupo — e faz questão de que ninguém se esqueça. Entra em palco com a confiança de quem ensaiou tudo (não ensaiou nada) e transforma qualquer sugestão num momento memorável. O charme é improvisado; o resto também.",
     photo: "/actors/sergio.jpg",
     socials: { instagram: "sergio_sa89" },
   },
   {
     name: "Diogo",
     role: "Improvisador",
-    bio: "É um macaco. É essa a bio, é essa a energia.",
+    bio: "É um macaco. É essa a bio, é essa a energia. Uh ah ah ah ah, uh uh uh uh, ah ah ah!",
     photo: "/actors/diogo.jpg",
     socials: { instagram: "josediogobpinto" },
   },
