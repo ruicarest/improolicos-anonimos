@@ -7,8 +7,7 @@ export const site = {
   instagram: "improolicosanonimos",
   email: "improolicosanonimos@gmail.com", // TODO: confirmar o email real
   // ID do vídeo do YouTube (a parte a seguir a "watch?v=").
-  // Placeholder para já — substitui pelo highlight de um espetáculo.
-  youtubeId: "dQw4w9WgXcQ",
+  youtubeId: "rNe6mfGKCxw",
 };
 
 export const instagramUrl = `https://instagram.com/${site.instagram}`;
