@@ -6,8 +6,12 @@ export const site = {
   hook: "Comédia 100% improvisada. Nada é preparado, tudo pode acontecer.",
   instagram: "improolicosanonimos",
   email: "improolicosanonimos@gmail.com", // TODO: confirmar o email real
-  // ID do vídeo do YouTube (a parte a seguir a "watch?v=").
-  youtubeId: "rNe6mfGKCxw",
+  // Vídeos do YouTube. O "id" é a parte a seguir a "watch?v=" (ou a seguir a youtu.be/).
+  // O "title" é opcional — se preenchido, aparece como legenda por baixo do vídeo.
+  videos: [
+    { id: "rNe6mfGKCxw", title: "" },
+    { id: "A4JLXmtASu4", title: "Sala de Confissões ou Assassino" },
+  ] as { id: string; title?: string }[],
 };
 
 export const instagramUrl = `https://instagram.com/${site.instagram}`;

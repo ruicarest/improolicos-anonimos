@@ -10,16 +10,23 @@ export default function VideoSection() {
         </h2>
         <p className="section__intro">
           Um cheirinho do que acontece quando ninguém sabe o que vai acontecer.
-          {/* TODO: troca o vídeo pelo highlight de um espetáculo real em src/data/site.ts (youtubeId). */}
+          {/* TODO: gerir os vídeos em src/data/site.ts (lista "videos"). */}
         </p>
 
-        <div className="video__frame">
-          <iframe
-            src={`https://www.youtube.com/embed/${site.youtubeId}`}
-            title={`${site.name} — vídeo`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+        <div className="video__grid">
+          {site.videos.map((v) => (
+            <figure className="video__item" key={v.id}>
+              <div className="video__frame">
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.title || `${site.name} — vídeo`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              {v.title && <figcaption className="video__caption">{v.title}</figcaption>}
+            </figure>
+          ))}
         </div>
       </div>
     </section>

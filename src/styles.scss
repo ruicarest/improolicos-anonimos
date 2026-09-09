@@ -308,6 +308,25 @@ img {
 }
 
 // ---- Vídeo ------------------------------------------------
+.video__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.video__item {
+  margin: 0;
+}
+
+.video__caption {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
 .video__frame {
   position: relative;
   width: 100%;
