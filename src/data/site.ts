@@ -10,7 +10,7 @@ export const site = {
   // O "title" é opcional — se preenchido, aparece como legenda por baixo do vídeo.
   videos: [
     { id: "rNe6mfGKCxw", title: "" },
-    { id: "A4JLXmtASu4", title: "Sala de Confissões ou Assassino" },
+    { id: "A4JLXmtASu4", title: "" },
   ] as { id: string; title?: string }[],
 };
 
